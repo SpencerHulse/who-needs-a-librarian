@@ -63,7 +63,6 @@ const resolvers = {
     },
     // Remove a book from savedBooks by bookId
     removeBook: async (parent, { bookId }, context) => {
-      console.log(bookId);
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
